@@ -48,6 +48,7 @@
 		B50160AE2C855CAF00328AFD /* clean-architecture-seminarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "clean-architecture-seminarUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B50160B22C855CAF00328AFD /* clean_architecture_seminarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clean_architecture_seminarUITests.swift; sourceTree = "<group>"; };
 		B50160B42C855CAF00328AFD /* clean_architecture_seminarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clean_architecture_seminarUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B50160C22C857C5B00328AFD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +99,7 @@
 		B50160912C855CAD00328AFD /* clean-architecture-seminar */ = {
 			isa = PBXGroup;
 			children = (
+				B50160C12C857C3C00328AFD /* Lecture */,
 				B50160922C855CAD00328AFD /* clean_architecture_seminarApp.swift */,
 				B50160942C855CAD00328AFD /* ContentView.swift */,
 				B50160962C855CAF00328AFD /* Assets.xcassets */,
@@ -131,6 +133,14 @@
 				B50160B42C855CAF00328AFD /* clean_architecture_seminarUITestsLaunchTests.swift */,
 			);
 			path = "clean-architecture-seminarUITests";
+			sourceTree = "<group>";
+		};
+		B50160C12C857C3C00328AFD /* Lecture */ = {
+			isa = PBXGroup;
+			children = (
+				B50160C22C857C5B00328AFD /* README.md */,
+			);
+			path = Lecture;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
