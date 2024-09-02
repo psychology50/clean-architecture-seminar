@@ -16,6 +16,8 @@
 		B50160A92C855CAF00328AFD /* clean_architecture_seminarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50160A82C855CAF00328AFD /* clean_architecture_seminarTests.swift */; };
 		B50160B32C855CAF00328AFD /* clean_architecture_seminarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50160B22C855CAF00328AFD /* clean_architecture_seminarUITests.swift */; };
 		B50160B52C855CAF00328AFD /* clean_architecture_seminarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50160B42C855CAF00328AFD /* clean_architecture_seminarUITestsLaunchTests.swift */; };
+		B50160C42C857C9400328AFD /* DependencyInversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50160C32C857C9400328AFD /* DependencyInversion.swift */; };
+		B50160C62C85980800328AFD /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50160C52C85980800328AFD /* Dependency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		B50160B22C855CAF00328AFD /* clean_architecture_seminarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clean_architecture_seminarUITests.swift; sourceTree = "<group>"; };
 		B50160B42C855CAF00328AFD /* clean_architecture_seminarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clean_architecture_seminarUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B50160C22C857C5B00328AFD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B50160C32C857C9400328AFD /* DependencyInversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInversion.swift; sourceTree = "<group>"; };
+		B50160C52C85980800328AFD /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				B50160C22C857C5B00328AFD /* README.md */,
+				B50160C32C857C9400328AFD /* DependencyInversion.swift */,
+				B50160C52C85980800328AFD /* Dependency.swift */,
 			);
 			path = Lecture;
 			sourceTree = "<group>";
@@ -273,8 +279,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B50160C62C85980800328AFD /* Dependency.swift in Sources */,
 				B501609C2C855CAF00328AFD /* Persistence.swift in Sources */,
 				B50160952C855CAD00328AFD /* ContentView.swift in Sources */,
+				B50160C42C857C9400328AFD /* DependencyInversion.swift in Sources */,
 				B501609F2C855CAF00328AFD /* clean_architecture_seminar.xcdatamodeld in Sources */,
 				B50160932C855CAD00328AFD /* clean_architecture_seminarApp.swift in Sources */,
 			);
