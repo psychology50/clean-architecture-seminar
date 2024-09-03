@@ -10,6 +10,8 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @StateObject private var viewModel = UserSearchViewModel()
+
 
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
@@ -40,6 +42,10 @@ struct ContentView: View {
             }
             Text("Select an item")
         }
+        .onAppear {
+            viewModel.loadAccessToken()
+        }
+        
     }
 
     private func addItem() {
