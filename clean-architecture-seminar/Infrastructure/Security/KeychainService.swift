@@ -29,8 +29,7 @@ class KeychainService {
         if status == errSecDuplicateItem {
             SecItemUpdate(keychainQuery as CFDictionary, [kSecValueData: accessToken.data(using: .utf8)!] as CFDictionary)
         } else if status != noErr {
-            //fatalError: 오류가 발생했을 때 프로그램을 즉시 종료시키는 역할
-            fatalError("Failed to save AccessToken to Keychain")
+            print("Failed to save AccessToken to Keychain")
         }
     }
     
@@ -59,7 +58,7 @@ class KeychainService {
         
         let status = SecItemDelete(query as CFDictionary)
         if status != noErr {
-            fatalError("Failed to delete AccessToken from Keychain")
+            print("Failed to delete AccessToken from Keychain")
         }
     }
 }
