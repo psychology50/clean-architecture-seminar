@@ -9,20 +9,15 @@ import Foundation
 
 class KeychainService {
     
-    private let tag: String
-    
-    // 초기화 메서드에서 tag 값을 설정
-    init(tag: String = "accessToken") {
-        self.tag = tag
-    }
+    private static let tag: String = "accessToken"
     
     // MARK: AccessToken Keychain
     
-    func saveAccessToken(accessToken: String) {
+    static func saveAccessToken(accessToken: String) {
         let keychainQuery: [CFString: Any] = [
-            kSecClass: kSecClassKey,
-            kSecAttrApplicationTag: tag,
-            kSecValueData: accessToken.data(using: .utf8)!
+            kSecClass: kSecClassGenericPassword,
+            kSecAttrAccount: tag,
+            kSecValueData: accessToken.data(using: .utf8)!,
         ]
         
         let status = SecItemAdd(keychainQuery as CFDictionary, nil)
@@ -33,11 +28,11 @@ class KeychainService {
         }
     }
     
-    func loadAccessToken() -> String? {
+    static func loadAccessToken() -> String? {
         let query: [CFString: Any] = [
-            kSecClass: kSecClassKey,
-            kSecAttrApplicationTag: tag,
-            kSecReturnData: kCFBooleanTrue!
+            kSecClass: kSecClassGenericPassword,
+            kSecAttrAccount: tag,
+            kSecReturnData: kCFBooleanTrue!,
         ]
         
         var item: CFTypeRef?
@@ -50,10 +45,10 @@ class KeychainService {
         }
     }
     
-    func deleteAccessToken() {
+    static func deleteAccessToken() {
         let query: [CFString: Any] = [
-            kSecClass: kSecClassKey,
-            kSecAttrApplicationTag: tag,
+            kSecClass: kSecClassGenericPassword,
+            kSecAttrAccount: tag,
         ]
         
         let status = SecItemDelete(query as CFDictionary)
@@ -61,4 +56,5 @@ class KeychainService {
             print("Failed to delete AccessToken from Keychain")
         }
     }
+    
 }
