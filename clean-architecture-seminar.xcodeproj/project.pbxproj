@@ -8,10 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		4A99CEA22C88045D005C451B /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A99CEA12C88045D005C451B /* Log.swift */; };
+		4A99CEA42C880A98005C451B /* clean_architecture_seminarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A99CEA32C880A98005C451B /* clean_architecture_seminarApp.swift */; };
+		4A99CEA82C88188C005C451B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A99CEA72C88188C005C451B /* UserModel.swift */; };
+		4A99CEAD2C88190E005C451B /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A99CEAC2C88190E005C451B /* UserProfileView.swift */; };
+		4A99CEAF2C881919005C451B /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A99CEAE2C881919005C451B /* UserProfileViewModel.swift */; };
+		4A99CEB22C88A188005C451B /* FetchUserProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A99CEB12C88A188005C451B /* FetchUserProfileUseCase.swift */; };
 		4AFFC6152C8775CA00926024 /* KeychainUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFFC6142C8775C900926024 /* KeychainUtil.swift */; };
 		4AFFC61B2C8778B500926024 /* KeyChainTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFFC61A2C8778B500926024 /* KeyChainTestViewModel.swift */; };
 		4AFFC61E2C87798400926024 /* KeyChainTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFFC61D2C87798400926024 /* KeyChainTestView.swift */; };
-		B50160932C855CAD00328AFD /* clean_architecture_seminarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50160922C855CAD00328AFD /* clean_architecture_seminarApp.swift */; };
 		B50160952C855CAD00328AFD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50160942C855CAD00328AFD /* ContentView.swift */; };
 		B50160972C855CAF00328AFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B50160962C855CAF00328AFD /* Assets.xcassets */; };
 		B501609A2C855CAF00328AFD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B50160992C855CAF00328AFD /* Preview Assets.xcassets */; };
@@ -43,11 +47,15 @@
 
 /* Begin PBXFileReference section */
 		4A99CEA12C88045D005C451B /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		4A99CEA32C880A98005C451B /* clean_architecture_seminarApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = clean_architecture_seminarApp.swift; sourceTree = "<group>"; };
+		4A99CEA72C88188C005C451B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserModel.swift; path = ../../../../../../Documents/UserModel.swift; sourceTree = "<group>"; };
+		4A99CEAC2C88190E005C451B /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserProfileView.swift; path = ../../../../../../../../Documents/UserProfileView.swift; sourceTree = "<group>"; };
+		4A99CEAE2C881919005C451B /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserProfileViewModel.swift; path = ../../../../../../../../Documents/UserProfileViewModel.swift; sourceTree = "<group>"; };
+		4A99CEB12C88A188005C451B /* FetchUserProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FetchUserProfileUseCase.swift; path = ../../../../../../Documents/FetchUserProfileUseCase.swift; sourceTree = "<group>"; };
 		4AFFC6142C8775C900926024 /* KeychainUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainUtil.swift; sourceTree = "<group>"; };
 		4AFFC61A2C8778B500926024 /* KeyChainTestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainTestViewModel.swift; sourceTree = "<group>"; };
 		4AFFC61D2C87798400926024 /* KeyChainTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainTestView.swift; sourceTree = "<group>"; };
 		B501608F2C855CAD00328AFD /* clean-architecture-seminar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "clean-architecture-seminar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B50160922C855CAD00328AFD /* clean_architecture_seminarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clean_architecture_seminarApp.swift; sourceTree = "<group>"; };
 		B50160942C855CAD00328AFD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B50160962C855CAF00328AFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B50160992C855CAF00328AFD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -88,6 +96,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A99CEA52C881865005C451B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				4A99CEB02C88A140005C451B /* UseCase */,
+				4A99CEA62C88187E005C451B /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		4A99CEA62C88187E005C451B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4A99CEA72C88188C005C451B /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4A99CEA92C8818F3005C451B /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				4A99CEAB2C8818FF005C451B /* ViewModel */,
+				4A99CEAA2C8818FB005C451B /* View */,
+			);
+			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		4A99CEAA2C8818FB005C451B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A99CEAC2C88190E005C451B /* UserProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4A99CEAB2C8818FF005C451B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4A99CEAE2C881919005C451B /* UserProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4A99CEB02C88A140005C451B /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				4A99CEB12C88A188005C451B /* FetchUserProfileUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
 		4AFFC6032C8771CE00926024 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,7 +174,7 @@
 		4AFFC6082C87720F00926024 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				B50160922C855CAD00328AFD /* clean_architecture_seminarApp.swift */,
+				4A99CEA32C880A98005C451B /* clean_architecture_seminarApp.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -155,6 +213,7 @@
 		4AFFC6162C87788000926024 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				4A99CEA92C8818F3005C451B /* UserProfile */,
 				4AFFC6192C87789700926024 /* KeyChainTest */,
 			);
 			path = Scene;
@@ -208,13 +267,13 @@
 		B50160912C855CAD00328AFD /* clean-architecture-seminar */ = {
 			isa = PBXGroup;
 			children = (
+				4A99CEA52C881865005C451B /* Domain */,
 				4AFFC60E2C8772D400926024 /* Infrastructure */,
 				4AFFC6082C87720F00926024 /* Application */,
 				4AFFC6072C87720300926024 /* Resources */,
 				4AFFC6062C8771EB00926024 /* Presentation */,
 				4AFFC6032C8771CE00926024 /* Common */,
 				B50160C12C857C3C00328AFD /* Lecture */,
-				B50160922C855CAD00328AFD /* clean_architecture_seminarApp.swift */,
 				B50160942C855CAD00328AFD /* ContentView.swift */,
 				B501609B2C855CAF00328AFD /* Persistence.swift */,
 				B501609D2C855CAF00328AFD /* clean_architecture_seminar.xcdatamodeld */,
@@ -391,13 +450,17 @@
 				4AFFC61B2C8778B500926024 /* KeyChainTestViewModel.swift in Sources */,
 				B50160C62C85980800328AFD /* Dependency.swift in Sources */,
 				B501609C2C855CAF00328AFD /* Persistence.swift in Sources */,
+				4A99CEA42C880A98005C451B /* clean_architecture_seminarApp.swift in Sources */,
 				B50160952C855CAD00328AFD /* ContentView.swift in Sources */,
 				B50160C42C857C9400328AFD /* DependencyInversion.swift in Sources */,
+				4A99CEAF2C881919005C451B /* UserProfileViewModel.swift in Sources */,
 				B501609F2C855CAF00328AFD /* clean_architecture_seminar.xcdatamodeld in Sources */,
+				4A99CEAD2C88190E005C451B /* UserProfileView.swift in Sources */,
 				4AFFC61E2C87798400926024 /* KeyChainTestView.swift in Sources */,
 				4AFFC6152C8775CA00926024 /* KeychainUtil.swift in Sources */,
 				4A99CEA22C88045D005C451B /* Log.swift in Sources */,
-				B50160932C855CAD00328AFD /* clean_architecture_seminarApp.swift in Sources */,
+				4A99CEA82C88188C005C451B /* UserModel.swift in Sources */,
+				4A99CEB22C88A188005C451B /* FetchUserProfileUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
