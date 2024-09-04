@@ -13,7 +13,7 @@ struct clean_architecture_seminarApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            KeyChainTestView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
