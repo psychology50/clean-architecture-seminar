@@ -1,5 +1,5 @@
 //
-//  KeychainService.swift
+//  KeychainUtil.swift
 //  clean-architecture-seminar
 //
 //  Created by 최희진 on 9/4/24.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class KeychainService {
+class KeychainUtil {
     
     private static let tag: String = "accessToken"
     
@@ -24,7 +24,7 @@ class KeychainService {
         if status == errSecDuplicateItem {
             SecItemUpdate(keychainQuery as CFDictionary, [kSecValueData: accessToken.data(using: .utf8)!] as CFDictionary)
         } else if status != noErr {
-            print("Failed to save AccessToken to Keychain")
+            Log.fault("Failed to save AccessToken to Keychain")
         }
     }
     
@@ -41,6 +41,7 @@ class KeychainService {
         if status == noErr, let data = item as? Data, let token = String(data: data, encoding: .utf8) {
             return token
         } else {
+            Log.fault("Failed to load AccessToken from Keychain")
             return nil
         }
     }
@@ -53,7 +54,7 @@ class KeychainService {
         
         let status = SecItemDelete(query as CFDictionary)
         if status != noErr {
-            print("Failed to delete AccessToken from Keychain")
+            Log.fault("Failed to delete AccessToken from Keychain")
         }
     }
     

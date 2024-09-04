@@ -8,26 +8,22 @@
 import Foundation
 
 class KeyChainTestViewModel: ObservableObject {
-    @Published var loadedAccessToken: String?
-    
-    private let keychainHelper = KeychainService()
 
     func saveToken(_ token: String) {
-        keychainHelper.saveAccessToken(accessToken: token)
-        print("AccessToken saved successfully.")
+        KeychainUtil.saveAccessToken(accessToken: token)
+        Log.info("AccessToken saved successfully.")
     }
     
     func loadToken() {
-        if let token = keychainHelper.loadAccessToken() {
-            loadedAccessToken = token
-            print("Loaded AccessToken: \(token)")
+        if let token = KeychainUtil.loadAccessToken() {
+            Log.info("Loaded AccessToken: \(token)")
         } else {
-            print("Failed to load AccessToken.")
+            Log.fault("Failed to load AccessToken.")
         }
     }
     
     func deleteToken() {
-        keychainHelper.deleteAccessToken()
-        print("AccessToken deleted successfully.")
+        KeychainUtil.deleteAccessToken()
+        Log.info("AccessToken deleted successfully.")
     }
 }

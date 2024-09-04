@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4AFFC6152C8775CA00926024 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFFC6142C8775C900926024 /* KeychainService.swift */; };
+		4A99CEA22C88045D005C451B /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A99CEA12C88045D005C451B /* Log.swift */; };
+		4AFFC6152C8775CA00926024 /* KeychainUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFFC6142C8775C900926024 /* KeychainUtil.swift */; };
 		4AFFC61B2C8778B500926024 /* KeyChainTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFFC61A2C8778B500926024 /* KeyChainTestViewModel.swift */; };
 		4AFFC61E2C87798400926024 /* KeyChainTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFFC61D2C87798400926024 /* KeyChainTestView.swift */; };
 		B50160932C855CAD00328AFD /* clean_architecture_seminarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50160922C855CAD00328AFD /* clean_architecture_seminarApp.swift */; };
@@ -39,7 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4AFFC6142C8775C900926024 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		4A99CEA12C88045D005C451B /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		4AFFC6142C8775C900926024 /* KeychainUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainUtil.swift; sourceTree = "<group>"; };
 		4AFFC61A2C8778B500926024 /* KeyChainTestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainTestViewModel.swift; sourceTree = "<group>"; };
 		4AFFC61D2C87798400926024 /* KeyChainTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainTestView.swift; sourceTree = "<group>"; };
 		B501608F2C855CAD00328AFD /* clean-architecture-seminar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "clean-architecture-seminar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,28 +86,9 @@
 		4AFFC6032C8771CE00926024 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4A99CEA12C88045D005C451B /* Log.swift */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		4AFFC6042C8771DF00926024 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				4AFFC6122C87749E00926024 /* PersistentStorages */,
-				4AFFC60A2C87727D00926024 /* Repositories */,
-				4AFFC6092C87727300926024 /* Network */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		4AFFC6052C8771E500926024 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				4AFFC60D2C8772C300926024 /* UseCases */,
-				4AFFC60C2C8772A000926024 /* Interfaces */,
-				4AFFC60B2C87729700926024 /* Entities */,
-			);
-			path = Domain;
 			sourceTree = "<group>";
 		};
 		4AFFC6062C8771EB00926024 /* Presentation */ = {
@@ -133,41 +116,6 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		4AFFC6092C87727300926024 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		4AFFC60A2C87727D00926024 /* Repositories */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Repositories;
-			sourceTree = "<group>";
-		};
-		4AFFC60B2C87729700926024 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
-		4AFFC60C2C8772A000926024 /* Interfaces */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Interfaces;
-			sourceTree = "<group>";
-		};
-		4AFFC60D2C8772C300926024 /* UseCases */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UseCases;
-			sourceTree = "<group>";
-		};
 		4AFFC60E2C8772D400926024 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,17 +139,10 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		4AFFC6122C87749E00926024 /* PersistentStorages */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PersistentStorages;
-			sourceTree = "<group>";
-		};
 		4AFFC6132C87758E00926024 /* Security */ = {
 			isa = PBXGroup;
 			children = (
-				4AFFC6142C8775C900926024 /* KeychainService.swift */,
+				4AFFC6142C8775C900926024 /* KeychainUtil.swift */,
 			);
 			path = Security;
 			sourceTree = "<group>";
@@ -266,8 +207,6 @@
 				4AFFC6082C87720F00926024 /* Application */,
 				4AFFC6072C87720300926024 /* Resources */,
 				4AFFC6062C8771EB00926024 /* Presentation */,
-				4AFFC6052C8771E500926024 /* Domain */,
-				4AFFC6042C8771DF00926024 /* Data */,
 				4AFFC6032C8771CE00926024 /* Common */,
 				B50160942C855CAD00328AFD /* ContentView.swift */,
 				B501609B2C855CAF00328AFD /* Persistence.swift */,
@@ -437,7 +376,8 @@
 				B50160952C855CAD00328AFD /* ContentView.swift in Sources */,
 				B501609F2C855CAF00328AFD /* clean_architecture_seminar.xcdatamodeld in Sources */,
 				4AFFC61E2C87798400926024 /* KeyChainTestView.swift in Sources */,
-				4AFFC6152C8775CA00926024 /* KeychainService.swift in Sources */,
+				4AFFC6152C8775CA00926024 /* KeychainUtil.swift in Sources */,
+				4A99CEA22C88045D005C451B /* Log.swift in Sources */,
 				B50160932C855CAD00328AFD /* clean_architecture_seminarApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
