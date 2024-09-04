@@ -13,20 +13,18 @@ protocol UserProfileViewModelInput {
 }
 
 protocol UserProfileViewModelOutput {
-    var userData: UserModel {get set}
+    var userData: UserModel {get}
 }
 
 protocol UserProfileViewModel: UserProfileViewModelInput, UserProfileViewModelOutput{ }
 
-class DefaultUserProfileViewModel: UserProfileViewModel {
-    var userData: UserModel
+class DefaultUserProfileViewModel: ObservableObject,UserProfileViewModel {
+    @Published var userData: UserModel
     
     private let fetchUserProfileUseCase: FetchUserProfileUseCase
-    private let mainQueue: DispatchQueue
     
-    init(fetchUserProfileUseCase: FetchUserProfileUseCase, mainQueue: DispatchQueue = .main) {
+    init(fetchUserProfileUseCase: FetchUserProfileUseCase) {
         self.fetchUserProfileUseCase = fetchUserProfileUseCase
-        self.mainQueue = mainQueue
         self.userData = UserModel(
             id: 0,
             username: "",
@@ -43,6 +41,7 @@ class DefaultUserProfileViewModel: UserProfileViewModel {
         )
     }
     
+    /// usecase를 호출하여 사용자 데이터를 업데이트하는 메서드
     private func updateUserData() {
        self.userData =  fetchUserProfileUseCase.execute()
  
