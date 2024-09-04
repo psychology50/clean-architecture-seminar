@@ -10,10 +10,10 @@
 		4A99CEA22C88045D005C451B /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A99CEA12C88045D005C451B /* Log.swift */; };
 		4A99CEA42C880A98005C451B /* clean_architecture_seminarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A99CEA32C880A98005C451B /* clean_architecture_seminarApp.swift */; };
 		4A99CEA82C88188C005C451B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A99CEA72C88188C005C451B /* UserModel.swift */; };
-		4A99CEAD2C88190E005C451B /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A99CEAC2C88190E005C451B /* UserProfileView.swift */; };
-		4A99CEAF2C881919005C451B /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A99CEAE2C881919005C451B /* UserProfileViewModel.swift */; };
 		4A99CEB22C88A188005C451B /* FetchUserProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A99CEB12C88A188005C451B /* FetchUserProfileUseCase.swift */; };
 		4A99CEB62C88A1F5005C451B /* UserProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A99CEB52C88A1F5005C451B /* UserProfileRepository.swift */; };
+		4AF5C7422C88CC010031B9FE /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF5C7412C88CC010031B9FE /* UserProfileView.swift */; };
+		4AF5C7452C88CC640031B9FE /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF5C7442C88CC640031B9FE /* UserProfileViewModel.swift */; };
 		4AFFC6152C8775CA00926024 /* KeychainUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFFC6142C8775C900926024 /* KeychainUtil.swift */; };
 		4AFFC61B2C8778B500926024 /* KeyChainTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFFC61A2C8778B500926024 /* KeyChainTestViewModel.swift */; };
 		4AFFC61E2C87798400926024 /* KeyChainTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFFC61D2C87798400926024 /* KeyChainTestView.swift */; };
@@ -50,10 +50,10 @@
 		4A99CEA12C88045D005C451B /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		4A99CEA32C880A98005C451B /* clean_architecture_seminarApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = clean_architecture_seminarApp.swift; sourceTree = "<group>"; };
 		4A99CEA72C88188C005C451B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserModel.swift; path = ../../../../../../Documents/UserModel.swift; sourceTree = "<group>"; };
-		4A99CEAC2C88190E005C451B /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserProfileView.swift; path = ../../../../../../../../Documents/UserProfileView.swift; sourceTree = "<group>"; };
-		4A99CEAE2C881919005C451B /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserProfileViewModel.swift; path = ../../../../../../../../Documents/UserProfileViewModel.swift; sourceTree = "<group>"; };
 		4A99CEB12C88A188005C451B /* FetchUserProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FetchUserProfileUseCase.swift; path = ../../../../../../Documents/FetchUserProfileUseCase.swift; sourceTree = "<group>"; };
 		4A99CEB52C88A1F5005C451B /* UserProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserProfileRepository.swift; path = ../../../../../../Documents/UserProfileRepository.swift; sourceTree = "<group>"; };
+		4AF5C7412C88CC010031B9FE /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		4AF5C7442C88CC640031B9FE /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
 		4AFFC6142C8775C900926024 /* KeychainUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainUtil.swift; sourceTree = "<group>"; };
 		4AFFC61A2C8778B500926024 /* KeyChainTestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainTestViewModel.swift; sourceTree = "<group>"; };
 		4AFFC61D2C87798400926024 /* KeyChainTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainTestView.swift; sourceTree = "<group>"; };
@@ -118,26 +118,10 @@
 		4A99CEA92C8818F3005C451B /* UserProfile */ = {
 			isa = PBXGroup;
 			children = (
-				4A99CEAB2C8818FF005C451B /* ViewModel */,
-				4A99CEAA2C8818FB005C451B /* View */,
+				4AF5C7432C88CC560031B9FE /* ViewModel */,
+				4AF5C7402C88CBF00031B9FE /* View */,
 			);
 			path = UserProfile;
-			sourceTree = "<group>";
-		};
-		4A99CEAA2C8818FB005C451B /* View */ = {
-			isa = PBXGroup;
-			children = (
-				4A99CEAC2C88190E005C451B /* UserProfileView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		4A99CEAB2C8818FF005C451B /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				4A99CEAE2C881919005C451B /* UserProfileViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		4A99CEB02C88A140005C451B /* UseCase */ = {
@@ -162,6 +146,22 @@
 				4A99CEB52C88A1F5005C451B /* UserProfileRepository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		4AF5C7402C88CBF00031B9FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4AF5C7412C88CC010031B9FE /* UserProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4AF5C7432C88CC560031B9FE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4AF5C7442C88CC640031B9FE /* UserProfileViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		4AFFC6032C8771CE00926024 /* Common */ = {
@@ -468,15 +468,15 @@
 			files = (
 				4AFFC61B2C8778B500926024 /* KeyChainTestViewModel.swift in Sources */,
 				B50160C62C85980800328AFD /* Dependency.swift in Sources */,
+				4AF5C7452C88CC640031B9FE /* UserProfileViewModel.swift in Sources */,
 				B501609C2C855CAF00328AFD /* Persistence.swift in Sources */,
 				4A99CEA42C880A98005C451B /* clean_architecture_seminarApp.swift in Sources */,
 				B50160952C855CAD00328AFD /* ContentView.swift in Sources */,
 				B50160C42C857C9400328AFD /* DependencyInversion.swift in Sources */,
 				4A99CEB62C88A1F5005C451B /* UserProfileRepository.swift in Sources */,
-				4A99CEAF2C881919005C451B /* UserProfileViewModel.swift in Sources */,
 				B501609F2C855CAF00328AFD /* clean_architecture_seminar.xcdatamodeld in Sources */,
-				4A99CEAD2C88190E005C451B /* UserProfileView.swift in Sources */,
 				4AFFC61E2C87798400926024 /* KeyChainTestView.swift in Sources */,
+				4AF5C7422C88CC010031B9FE /* UserProfileView.swift in Sources */,
 				4AFFC6152C8775CA00926024 /* KeychainUtil.swift in Sources */,
 				4A99CEA22C88045D005C451B /* Log.swift in Sources */,
 				4A99CEA82C88188C005C451B /* UserModel.swift in Sources */,
