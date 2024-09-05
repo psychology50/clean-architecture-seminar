@@ -13,7 +13,7 @@ struct UserProfileItemViewModel: Equatable {
 }
 
 extension UserProfileItemViewModel {
-    init(userData: UserData) {
+    init(userData: UserDataModel) {
         self.username = userData.username
         self.name = userData.name 
     }
