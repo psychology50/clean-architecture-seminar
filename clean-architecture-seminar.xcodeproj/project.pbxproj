@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A8CA1992C89D0490068F813 /* FetchUserProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8CA1982C89D0490068F813 /* FetchUserProfileProtocol.swift */; };
 		4A99CEA22C88045D005C451B /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A99CEA12C88045D005C451B /* Log.swift */; };
 		4A99CEA42C880A98005C451B /* clean_architecture_seminarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A99CEA32C880A98005C451B /* clean_architecture_seminarApp.swift */; };
 		4AF5C7422C88CC010031B9FE /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF5C7412C88CC010031B9FE /* UserProfileView.swift */; };
 		4AF5C7452C88CC640031B9FE /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF5C7442C88CC640031B9FE /* UserProfileViewModel.swift */; };
 		4AF5C74A2C88CD1F0031B9FE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF5C7492C88CD1F0031B9FE /* UserModel.swift */; };
 		4AF5C74C2C88CD340031B9FE /* FetchUserProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF5C74B2C88CD340031B9FE /* FetchUserProfileUseCase.swift */; };
-		4AF5C7502C88CD6E0031B9FE /* UserProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF5C74F2C88CD6E0031B9FE /* UserProfileRepository.swift */; };
+		4AF5C7522C88D2920031B9FE /* UserProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF5C7512C88D2920031B9FE /* UserProfileRepository.swift */; };
 		4AFFC6152C8775CA00926024 /* KeychainUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFFC6142C8775C900926024 /* KeychainUtil.swift */; };
 		4AFFC61B2C8778B500926024 /* KeyChainTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFFC61A2C8778B500926024 /* KeyChainTestViewModel.swift */; };
 		4AFFC61E2C87798400926024 /* KeyChainTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFFC61D2C87798400926024 /* KeyChainTestView.swift */; };
@@ -47,13 +48,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A8CA1982C89D0490068F813 /* FetchUserProfileProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUserProfileProtocol.swift; sourceTree = "<group>"; };
 		4A99CEA12C88045D005C451B /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		4A99CEA32C880A98005C451B /* clean_architecture_seminarApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = clean_architecture_seminarApp.swift; sourceTree = "<group>"; };
 		4AF5C7412C88CC010031B9FE /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		4AF5C7442C88CC640031B9FE /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
 		4AF5C7492C88CD1F0031B9FE /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		4AF5C74B2C88CD340031B9FE /* FetchUserProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUserProfileUseCase.swift; sourceTree = "<group>"; };
-		4AF5C74F2C88CD6E0031B9FE /* UserProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserProfileRepository.swift; path = "clean-architecture-seminar/Domain /UseCase/UserProfileRepository.swift"; sourceTree = SOURCE_ROOT; };
+		4AF5C7512C88D2920031B9FE /* UserProfileRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileRepository.swift; sourceTree = "<group>"; };
 		4AFFC6142C8775C900926024 /* KeychainUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainUtil.swift; sourceTree = "<group>"; };
 		4AFFC61A2C8778B500926024 /* KeyChainTestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainTestViewModel.swift; sourceTree = "<group>"; };
 		4AFFC61D2C87798400926024 /* KeyChainTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainTestView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A8CA1972C89D0000068F813 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				4A8CA1982C89D0490068F813 /* FetchUserProfileProtocol.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
 		4A99CEA92C8818F3005C451B /* UserProfile */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,27 +133,28 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		4AF5C7462C88CD110031B9FE /* Model */ = {
+		4AF5C7462C88CD110031B9FE /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				4AF5C7492C88CD1F0031B9FE /* UserModel.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		4AF5C7472C88CD110031B9FE /* UseCase */ = {
+		4AF5C7472C88CD110031B9FE /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
 				4AF5C74B2C88CD340031B9FE /* FetchUserProfileUseCase.swift */,
 			);
-			path = UseCase;
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 		4AF5C7482C88CD110031B9FE /* Domain  */ = {
 			isa = PBXGroup;
 			children = (
-				4AF5C7462C88CD110031B9FE /* Model */,
-				4AF5C7472C88CD110031B9FE /* UseCase */,
+				4A8CA1972C89D0000068F813 /* Interfaces */,
+				4AF5C7462C88CD110031B9FE /* Models */,
+				4AF5C7472C88CD110031B9FE /* UseCases */,
 			);
 			path = "Domain ";
 			sourceTree = "<group>";
@@ -151,7 +162,7 @@
 		4AF5C74D2C88CD580031B9FE /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				4AF5C74F2C88CD6E0031B9FE /* UserProfileRepository.swift */,
+				4AF5C7512C88D2920031B9FE /* UserProfileRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -471,8 +482,9 @@
 				4AF5C7452C88CC640031B9FE /* UserProfileViewModel.swift in Sources */,
 				4AF5C74C2C88CD340031B9FE /* FetchUserProfileUseCase.swift in Sources */,
 				B501609C2C855CAF00328AFD /* Persistence.swift in Sources */,
+				4A8CA1992C89D0490068F813 /* FetchUserProfileProtocol.swift in Sources */,
 				4A99CEA42C880A98005C451B /* clean_architecture_seminarApp.swift in Sources */,
-				4AF5C7502C88CD6E0031B9FE /* UserProfileRepository.swift in Sources */,
+				4AF5C7522C88D2920031B9FE /* UserProfileRepository.swift in Sources */,
 				B50160952C855CAD00328AFD /* ContentView.swift in Sources */,
 				B50160C42C857C9400328AFD /* DependencyInversion.swift in Sources */,
 				4AF5C74A2C88CD1F0031B9FE /* UserModel.swift in Sources */,
