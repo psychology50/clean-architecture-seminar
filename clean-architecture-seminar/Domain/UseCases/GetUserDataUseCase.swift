@@ -10,5 +10,25 @@ import Foundation
 protocol GetUserDataUseCase {
     
     /// 사용자 정보 가져오는 함수
-    func start()
+    func getUserData(completion: @escaping (UserData) -> Void)
+}
+
+final class DefaultGetUserDataUseCase: GetUserDataUseCase {
+    
+    func getUserData(completion: @escaping (UserData) -> Void) {
+            let dummyData = UserData(
+                id: 1,
+                username: "yanni",
+                name: "신얀",
+                isGeneralSignUp: true,
+                passwordUpdatedAt: "",
+                profileImageUrl: "",
+                phone: "",
+                profileVisibility: "",
+                locked: false,
+                notifySetting: NotifySetting(accountBookNotify: true, feedNotify: true, chatNotify: true),
+                createdAt: "",
+                oauthAccount: OauthAccount(kakao: false, google: true, apple: false)
+            )
+    }
 }
