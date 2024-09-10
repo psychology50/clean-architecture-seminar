@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-final class ProfileSceneDIContainer: ProfileFlowCoordinatorDependency {
+final class ProfileSceneDIContainer {
     
     struct Dependencies {
         let apiDataTransferService: DataTransferService
@@ -17,6 +17,12 @@ final class ProfileSceneDIContainer: ProfileFlowCoordinatorDependency {
 
     init(dependencies: Dependencies) {
         self.dependencies = dependencies
+    }
+    
+    // DefaultProfileFactory를 생성하여 반환
+    func makeProfileFactory() -> DefaultProfileFactory {
+        let viewModelWrapper = makeUserProfileViewModelWrapper()
+        return DefaultProfileFactory(userProfileViewModelWrapper: viewModelWrapper)
     }
     
     // MARK: - Use Cases
@@ -30,12 +36,20 @@ final class ProfileSceneDIContainer: ProfileFlowCoordinatorDependency {
     }
     
     // MARK: - View Model
-    func makeProfileViewModel() -> DefaultUserProfileViewModel {
+    func makeProfileViewModel() -> any UserProfileViewModel {
         DefaultUserProfileViewModel(fetchUserProfileUseCase: makeProfileUseCase())
     }
     
-    // MARK: - Flow Coordinator
-    func createProfileFlow() -> ProfileFlowCoordinator {
-        ProfileFlowCoordinator(dependencies: self)
+    // MARK: - View Model Wrapper
+    
+    func makeUserProfileViewModelWrapper() -> UserProfileViewModelWrapper {
+        UserProfileViewModelWrapper(
+            viewModel: makeProfileViewModel()
+        )
     }
+//    
+//    // MARK: - Flow Coordinator
+//    func createProfileFlow() -> ProfileFlowCoordinator {
+//        ProfileFlowCoordinator(dependencies: self)
+//    }
 }

@@ -13,6 +13,8 @@
 		4A2E594B2C900959004A2798 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2E594A2C900959004A2798 /* AppFlowCoordinator.swift */; };
 		4A2E594E2C900A73004A2798 /* ProfileFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2E594D2C900A73004A2798 /* ProfileFlowCoordinator.swift */; };
 		4A2E59502C901046004A2798 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2E594F2C901046004A2798 /* DataTransferService.swift */; };
+		4A2E59522C90A777004A2798 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2E59512C90A777004A2798 /* AppComponent.swift */; };
+		4A2E59552C90A84A004A2798 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2E59542C90A84A004A2798 /* RootView.swift */; };
 		4A8CA1992C89D0490068F813 /* FetchUserProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8CA1982C89D0490068F813 /* FetchUserProfileProtocol.swift */; };
 		4A99CEA22C88045D005C451B /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A99CEA12C88045D005C451B /* Log.swift */; };
 		4A99CEA42C880A98005C451B /* clean_architecture_seminarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A99CEA32C880A98005C451B /* clean_architecture_seminarApp.swift */; };
@@ -60,6 +62,8 @@
 		4A2E594A2C900959004A2798 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
 		4A2E594D2C900A73004A2798 /* ProfileFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFlowCoordinator.swift; sourceTree = "<group>"; };
 		4A2E594F2C901046004A2798 /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
+		4A2E59512C90A777004A2798 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
+		4A2E59542C90A84A004A2798 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		4A8CA1982C89D0490068F813 /* FetchUserProfileProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUserProfileProtocol.swift; sourceTree = "<group>"; };
 		4A99CEA12C88045D005C451B /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		4A99CEA32C880A98005C451B /* clean_architecture_seminarApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = clean_architecture_seminarApp.swift; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 			children = (
 				4A2E59462C9007CE004A2798 /* AppDIContainer.swift */,
 				4A2E59482C900862004A2798 /* ProfileSceneDIContainer.swift */,
+				4A2E59512C90A777004A2798 /* AppComponent.swift */,
 			);
 			path = DIContainer;
 			sourceTree = "<group>";
@@ -143,6 +148,14 @@
 				4A2E594D2C900A73004A2798 /* ProfileFlowCoordinator.swift */,
 			);
 			path = Flows;
+			sourceTree = "<group>";
+		};
+		4A2E59532C90A83E004A2798 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				4A2E59542C90A84A004A2798 /* RootView.swift */,
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 		4A8CA1972C89D0000068F813 /* Interfaces */ = {
@@ -291,6 +304,7 @@
 		4AFFC6162C87788000926024 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				4A2E59532C90A83E004A2798 /* Root */,
 				4A2E594C2C900A62004A2798 /* Flows */,
 				4A99CEA92C8818F3005C451B /* UserProfile */,
 				4AFFC6192C87789700926024 /* KeyChainTest */,
@@ -535,6 +549,7 @@
 				4A8CA1992C89D0490068F813 /* FetchUserProfileProtocol.swift in Sources */,
 				4A99CEA42C880A98005C451B /* clean_architecture_seminarApp.swift in Sources */,
 				4A2E59492C900862004A2798 /* ProfileSceneDIContainer.swift in Sources */,
+				4A2E59552C90A84A004A2798 /* RootView.swift in Sources */,
 				4AF5C7522C88D2920031B9FE /* UserProfileRepository.swift in Sources */,
 				B50160952C855CAD00328AFD /* ContentView.swift in Sources */,
 				4A2E594B2C900959004A2798 /* AppFlowCoordinator.swift in Sources */,
@@ -542,6 +557,7 @@
 				4AF5C74A2C88CD1F0031B9FE /* UserModel.swift in Sources */,
 				B501609F2C855CAF00328AFD /* clean_architecture_seminar.xcdatamodeld in Sources */,
 				4AFFC61E2C87798400926024 /* KeyChainTestView.swift in Sources */,
+				4A2E59522C90A777004A2798 /* AppComponent.swift in Sources */,
 				4A2E59432C90031E004A2798 /* ProfileResponseDTO.swift in Sources */,
 				4AF5C7422C88CC010031B9FE /* UserProfileView.swift in Sources */,
 				4AFFC6152C8775CA00926024 /* KeychainUtil.swift in Sources */,

@@ -9,16 +9,13 @@ import SwiftUI
 
 @main
 struct clean_architecture_seminarApp: App {
-    let persistenceController = PersistenceController.shared
+//    let persistenceController = PersistenceController.shared
+//        .environment(\.managedObjectContext, persistenceController.container.viewContext)
 
     var body: some Scene {
         WindowGroup {
-//            let repository = DefaultUserProfileRepository()
-//            let fetchUserProfileUseCase = DefaultFetchUserProfileUseCase(repository: repository)
-//            let viewModel = DefaultUserProfileViewModel(fetchUserProfileUseCase: fetchUserProfileUseCase)
-            
-            UserProfileView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            AppComponent()
+                    .makeRootView()
         }
     }
 }

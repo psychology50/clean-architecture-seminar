@@ -7,23 +7,43 @@
 
 import SwiftUI
 
-protocol ProfileFlowCoordinatorDependency  {
-    func makeProfileViewModel() -> DefaultUserProfileViewModel
+struct ProfileFactoryDependency: RootDependency {
+    let profileFactory: any ProfileFactory
 }
 
-final class ProfileFlowCoordinator {
+protocol ProfileFactory {
+    associatedtype SomeView: View
+    func makeProfileView() -> SomeView
+}
 
-    private let dependencies: ProfileFlowCoordinatorDependency
-    private weak var profileViewModel: DefaultUserProfileViewModel?
-
-    init(dependencies: ProfileFlowCoordinatorDependency) {
-        self.dependencies = dependencies
+final class DefaultProfileFactory: ProfileFactory {
+    private let userProfileViewModelWrapper: UserProfileViewModelWrapper
+    
+    init(userProfileViewModelWrapper: UserProfileViewModelWrapper) {
+        self.userProfileViewModelWrapper = userProfileViewModelWrapper
     }
     
-    func start() {
-        let vm = dependencies.makeProfileViewModel()
-//
-//        navigationController?.pushViewController(vc, animated: false)
-//        moviesListVC = vc
+    public func makeProfileView() -> some View {
+        UserProfileView(viewModelWrapper: userProfileViewModelWrapper)
     }
 }
+
+//
+//protocol ProfileFlowCoordinatorDependency  {
+//    func makeProfileViewModel() -> any UserProfileViewModel
+//}
+//
+//final class ProfileFlowCoordinator {
+//
+//    private let dependencies: ProfileFlowCoordinatorDependency
+//    private var profileViewModel: any UserProfileViewModel
+//
+//    init(dependencies: ProfileFlowCoordinatorDependency) {
+//        self.dependencies = dependencies
+//    }
+//    
+//    func start() {
+//        let vm = dependencies.makeProfileViewModel()
+//        profileViewModel = vm
+//    }
+//}

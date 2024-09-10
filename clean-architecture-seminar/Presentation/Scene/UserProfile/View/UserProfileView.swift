@@ -6,23 +6,10 @@
 //
 
 import SwiftUI
-import Combine
 
-////generic 타입 버전(ObservedObject여야 함)
-//struct GenericUserProfileView<Model>: View where Model: UserProfileViewModel {
-//    @ObservedObject var viewModel: Model
-//    
-//    var body: some View {
-//        VStack {
-//            
-//        }
-//    }
-//}
-
-//stateobject 사용법
-struct UserProfileView: View {
+struct UserProfileView<Model>: View where Model: UserProfileViewModelWrapper{
     
-    @StateObject var viewModelWrapper = UserProfileViewModelWrapper()
+    @ObservedObject var viewModelWrapper: Model
     
     var body: some View {
         VStack {
@@ -66,20 +53,8 @@ final class UserProfileViewModelWrapper: ObservableObject {
     @Published var userData: UserModel  // 외부에서 관찰될 userData
     var viewModel: UserProfileViewModel
     
-    private var cancellables = Set<AnyCancellable>() // Combine의 구독을 관리할 Set
-    
-    init() {
-        let repository = DefaultUserProfileRepository()
-        let fetchUserProfileUseCase = DefaultFetchUserProfileUseCase(repository: repository)
-        let viewModel = DefaultUserProfileViewModel(fetchUserProfileUseCase: fetchUserProfileUseCase)
+    init(viewModel: UserProfileViewModel) {
         self.viewModel = viewModel
         self.userData = viewModel.userData
-        
-        // viewModel의 userData가 변경될 때마다 userData 업데이트
-        viewModel.$userData
-            .sink { [weak self] newUserData in
-                self?.userData = newUserData
-            }
-            .store(in: &cancellables)
     }
 }

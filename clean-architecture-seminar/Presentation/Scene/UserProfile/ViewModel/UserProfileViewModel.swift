@@ -16,10 +16,6 @@ protocol UserProfileViewModelOutput {
     var userData: UserModel {get}
 }
 
-//generic
-//protocol UserProfileViewModel: UserProfileViewModelInput, UserProfileViewModelOutput, ObservableObject { }
-
-//stateObject
 protocol UserProfileViewModel: UserProfileViewModelInput, UserProfileViewModelOutput { }
 
 class DefaultUserProfileViewModel: ObservableObject, UserProfileViewModel {
@@ -32,7 +28,7 @@ class DefaultUserProfileViewModel: ObservableObject, UserProfileViewModel {
         self.userData = UserModel(
             id: 0,
             username: "",
-            name: "",
+            name: "ㅁㄴㄴ",
             isGeneralSignUp: false,
             passwordUpdatedAt: "",
             profileImageUrl: "",
@@ -48,7 +44,7 @@ class DefaultUserProfileViewModel: ObservableObject, UserProfileViewModel {
     /// usecase를 호출하여 사용자 데이터를 업데이트하는 메서드
     private func updateUserData() {
        self.userData =  fetchUserProfileUseCase.execute()
- 
+       Log.debug(self.userData)
     }
 }
 
