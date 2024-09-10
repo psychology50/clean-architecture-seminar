@@ -16,9 +16,13 @@ protocol UserProfileViewModelOutput {
     var userData: UserModel {get}
 }
 
-protocol UserProfileViewModel: UserProfileViewModelInput, UserProfileViewModelOutput{ }
+//generic
+//protocol UserProfileViewModel: UserProfileViewModelInput, UserProfileViewModelOutput, ObservableObject { }
 
-class DefaultUserProfileViewModel: ObservableObject,UserProfileViewModel {
+//stateObject
+protocol UserProfileViewModel: UserProfileViewModelInput, UserProfileViewModelOutput { }
+
+class DefaultUserProfileViewModel: ObservableObject, UserProfileViewModel {
     @Published var userData: UserModel
     
     private let fetchUserProfileUseCase: FetchUserProfileUseCase

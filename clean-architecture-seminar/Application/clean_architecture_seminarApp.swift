@@ -13,6 +13,10 @@ struct clean_architecture_seminarApp: App {
 
     var body: some Scene {
         WindowGroup {
+//            let repository = DefaultUserProfileRepository()
+//            let fetchUserProfileUseCase = DefaultFetchUserProfileUseCase(repository: repository)
+//            let viewModel = DefaultUserProfileViewModel(fetchUserProfileUseCase: fetchUserProfileUseCase)
+            
             UserProfileView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }

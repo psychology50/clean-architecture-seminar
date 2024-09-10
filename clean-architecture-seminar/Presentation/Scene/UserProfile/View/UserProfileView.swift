@@ -8,6 +8,18 @@
 import SwiftUI
 import Combine
 
+////generic 타입 버전(ObservedObject여야 함)
+//struct GenericUserProfileView<Model>: View where Model: UserProfileViewModel {
+//    @ObservedObject var viewModel: Model
+//    
+//    var body: some View {
+//        VStack {
+//            
+//        }
+//    }
+//}
+
+//stateobject 사용법
 struct UserProfileView: View {
     
     @StateObject var viewModelWrapper = UserProfileViewModelWrapper()
