@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		4A2E59432C90031E004A2798 /* ProfileResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2E59422C90031E004A2798 /* ProfileResponseDTO.swift */; };
+		4A2E59472C9007CE004A2798 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2E59462C9007CE004A2798 /* AppDIContainer.swift */; };
+		4A2E59492C900862004A2798 /* ProfileSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2E59482C900862004A2798 /* ProfileSceneDIContainer.swift */; };
+		4A2E594B2C900959004A2798 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2E594A2C900959004A2798 /* AppFlowCoordinator.swift */; };
+		4A2E594E2C900A73004A2798 /* ProfileFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2E594D2C900A73004A2798 /* ProfileFlowCoordinator.swift */; };
+		4A2E59502C901046004A2798 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2E594F2C901046004A2798 /* DataTransferService.swift */; };
 		4A8CA1992C89D0490068F813 /* FetchUserProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8CA1982C89D0490068F813 /* FetchUserProfileProtocol.swift */; };
-		4A8CA19B2C89D1890068F813 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8CA19A2C89D1890068F813 /* AppDelegate.swift */; };
 		4A99CEA22C88045D005C451B /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A99CEA12C88045D005C451B /* Log.swift */; };
 		4A99CEA42C880A98005C451B /* clean_architecture_seminarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A99CEA32C880A98005C451B /* clean_architecture_seminarApp.swift */; };
 		4AF5C7422C88CC010031B9FE /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF5C7412C88CC010031B9FE /* UserProfileView.swift */; };
@@ -51,8 +55,12 @@
 
 /* Begin PBXFileReference section */
 		4A2E59422C90031E004A2798 /* ProfileResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponseDTO.swift; sourceTree = "<group>"; };
+		4A2E59462C9007CE004A2798 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
+		4A2E59482C900862004A2798 /* ProfileSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSceneDIContainer.swift; sourceTree = "<group>"; };
+		4A2E594A2C900959004A2798 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
+		4A2E594D2C900A73004A2798 /* ProfileFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFlowCoordinator.swift; sourceTree = "<group>"; };
+		4A2E594F2C901046004A2798 /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
 		4A8CA1982C89D0490068F813 /* FetchUserProfileProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUserProfileProtocol.swift; sourceTree = "<group>"; };
-		4A8CA19A2C89D1890068F813 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A99CEA12C88045D005C451B /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		4A99CEA32C880A98005C451B /* clean_architecture_seminarApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = clean_architecture_seminarApp.swift; sourceTree = "<group>"; };
 		4AF5C7412C88CC010031B9FE /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
@@ -118,6 +126,23 @@
 				4A2E59422C90031E004A2798 /* ProfileResponseDTO.swift */,
 			);
 			path = DataMapping;
+			sourceTree = "<group>";
+		};
+		4A2E59452C9007BD004A2798 /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				4A2E59462C9007CE004A2798 /* AppDIContainer.swift */,
+				4A2E59482C900862004A2798 /* ProfileSceneDIContainer.swift */,
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
+		4A2E594C2C900A62004A2798 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				4A2E594D2C900A73004A2798 /* ProfileFlowCoordinator.swift */,
+			);
+			path = Flows;
 			sourceTree = "<group>";
 		};
 		4A8CA1972C89D0000068F813 /* Interfaces */ = {
@@ -224,8 +249,9 @@
 		4AFFC6082C87720F00926024 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				4A2E59452C9007BD004A2798 /* DIContainer */,
 				4A99CEA32C880A98005C451B /* clean_architecture_seminarApp.swift */,
-				4A8CA19A2C89D1890068F813 /* AppDelegate.swift */,
+				4A2E594A2C900959004A2798 /* AppFlowCoordinator.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -242,6 +268,7 @@
 		4AFFC6102C8772EF00926024 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				4A2E594F2C901046004A2798 /* DataTransferService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -264,6 +291,7 @@
 		4AFFC6162C87788000926024 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				4A2E594C2C900A62004A2798 /* Flows */,
 				4A99CEA92C8818F3005C451B /* UserProfile */,
 				4AFFC6192C87789700926024 /* KeyChainTest */,
 			);
@@ -506,8 +534,10 @@
 				B501609C2C855CAF00328AFD /* Persistence.swift in Sources */,
 				4A8CA1992C89D0490068F813 /* FetchUserProfileProtocol.swift in Sources */,
 				4A99CEA42C880A98005C451B /* clean_architecture_seminarApp.swift in Sources */,
+				4A2E59492C900862004A2798 /* ProfileSceneDIContainer.swift in Sources */,
 				4AF5C7522C88D2920031B9FE /* UserProfileRepository.swift in Sources */,
 				B50160952C855CAD00328AFD /* ContentView.swift in Sources */,
+				4A2E594B2C900959004A2798 /* AppFlowCoordinator.swift in Sources */,
 				B50160C42C857C9400328AFD /* DependencyInversion.swift in Sources */,
 				4AF5C74A2C88CD1F0031B9FE /* UserModel.swift in Sources */,
 				B501609F2C855CAF00328AFD /* clean_architecture_seminar.xcdatamodeld in Sources */,
@@ -515,7 +545,9 @@
 				4A2E59432C90031E004A2798 /* ProfileResponseDTO.swift in Sources */,
 				4AF5C7422C88CC010031B9FE /* UserProfileView.swift in Sources */,
 				4AFFC6152C8775CA00926024 /* KeychainUtil.swift in Sources */,
-				4A8CA19B2C89D1890068F813 /* AppDelegate.swift in Sources */,
+				4A2E59472C9007CE004A2798 /* AppDIContainer.swift in Sources */,
+				4A2E59502C901046004A2798 /* DataTransferService.swift in Sources */,
+				4A2E594E2C900A73004A2798 /* ProfileFlowCoordinator.swift in Sources */,
 				4A99CEA22C88045D005C451B /* Log.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
