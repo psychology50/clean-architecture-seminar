@@ -19,6 +19,8 @@
 		4A99CEA22C88045D005C451B /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A99CEA12C88045D005C451B /* Log.swift */; };
 		4A99CEA42C880A98005C451B /* clean_architecture_seminarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A99CEA32C880A98005C451B /* clean_architecture_seminarApp.swift */; };
 		4AC0F4DB2C9159CF006D528B /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC0F4DA2C9159CF006D528B /* Observable.swift */; };
+		4AC0F4DE2C91EE5C006D528B /* View+navigate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC0F4DD2C91EE5C006D528B /* View+navigate.swift */; };
+		4AC0F4E12C91EFCB006D528B /* NameEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC0F4E02C91EFCB006D528B /* NameEditView.swift */; };
 		4AF5C7422C88CC010031B9FE /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF5C7412C88CC010031B9FE /* UserProfileView.swift */; };
 		4AF5C7452C88CC640031B9FE /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF5C7442C88CC640031B9FE /* UserProfileViewModel.swift */; };
 		4AF5C74A2C88CD1F0031B9FE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF5C7492C88CD1F0031B9FE /* UserModel.swift */; };
@@ -69,6 +71,8 @@
 		4A99CEA12C88045D005C451B /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		4A99CEA32C880A98005C451B /* clean_architecture_seminarApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = clean_architecture_seminarApp.swift; sourceTree = "<group>"; };
 		4AC0F4DA2C9159CF006D528B /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		4AC0F4DD2C91EE5C006D528B /* View+navigate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+navigate.swift"; sourceTree = "<group>"; };
+		4AC0F4E02C91EFCB006D528B /* NameEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameEditView.swift; sourceTree = "<group>"; };
 		4AF5C7412C88CC010031B9FE /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		4AF5C7442C88CC640031B9FE /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
 		4AF5C7492C88CD1F0031B9FE /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -177,10 +181,19 @@
 			path = UserProfile;
 			sourceTree = "<group>";
 		};
+		4AC0F4DC2C91EE32006D528B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4AC0F4DD2C91EE5C006D528B /* View+navigate.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		4AF5C7402C88CBF00031B9FE /* View */ = {
 			isa = PBXGroup;
 			children = (
 				4AF5C7412C88CC010031B9FE /* UserProfileView.swift */,
+				4AC0F4E02C91EFCB006D528B /* NameEditView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -247,6 +260,7 @@
 		4AFFC6062C8771EB00926024 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				4A2E594C2C900A62004A2798 /* Flows */,
 				4AFFC6162C87788000926024 /* Scene */,
 				4AFFC6112C87730400926024 /* Utils */,
 			);
@@ -291,6 +305,7 @@
 		4AFFC6112C87730400926024 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				4AC0F4DC2C91EE32006D528B /* Extensions */,
 				4AC0F4DA2C9159CF006D528B /* Observable.swift */,
 			);
 			path = Utils;
@@ -308,7 +323,6 @@
 			isa = PBXGroup;
 			children = (
 				4A2E59532C90A83E004A2798 /* Root */,
-				4A2E594C2C900A62004A2798 /* Flows */,
 				4A99CEA92C8818F3005C451B /* UserProfile */,
 				4AFFC6192C87789700926024 /* KeyChainTest */,
 			);
@@ -561,8 +575,10 @@
 				4AF5C74A2C88CD1F0031B9FE /* UserModel.swift in Sources */,
 				B501609F2C855CAF00328AFD /* clean_architecture_seminar.xcdatamodeld in Sources */,
 				4AFFC61E2C87798400926024 /* KeyChainTestView.swift in Sources */,
+				4AC0F4E12C91EFCB006D528B /* NameEditView.swift in Sources */,
 				4A2E59522C90A777004A2798 /* AppComponent.swift in Sources */,
 				4A2E59432C90031E004A2798 /* ProfileResponseDTO.swift in Sources */,
+				4AC0F4DE2C91EE5C006D528B /* View+navigate.swift in Sources */,
 				4AF5C7422C88CC010031B9FE /* UserProfileView.swift in Sources */,
 				4AFFC6152C8775CA00926024 /* KeychainUtil.swift in Sources */,
 				4A2E59472C9007CE004A2798 /* AppDIContainer.swift in Sources */,
@@ -740,6 +756,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -769,6 +786,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

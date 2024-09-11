@@ -8,7 +8,8 @@
 import Foundation
 
 protocol UserProfileViewModelInput {
-    func viewWillAppear()
+    func viewDidLoad()
+    func updateData(_ newName: String)
 }
 
 protocol UserProfileViewModelOutput {
@@ -27,7 +28,7 @@ class DefaultUserProfileViewModel: UserProfileViewModel {
         self.userData = Observable(UserModel(
             id: 0,
             username: "",
-            name: "ㅁㄹㄴ",
+            name: "기본",
             isGeneralSignUp: false,
             passwordUpdatedAt: "",
             profileImageUrl: "",
@@ -45,13 +46,25 @@ class DefaultUserProfileViewModel: UserProfileViewModel {
         self.userData.value = fetchUserProfileUseCase.execute()
         Log.debug(self.userData.value)
     }
+    
+    /// 이름을 업데이트하는 메서드
+    private func updateName(_ newName: String) {
+        self.userData.value = self.userData.value.update(name: newName)
+        Log.debug("Updated name to \(newName)")
+        Log.debug("Updated \(self.userData.value)")
+    }
 }
 
 
 // MARK: - INPUT. View event methods
 extension DefaultUserProfileViewModel {
         
-    func viewWillAppear() {
+    func viewDidLoad() {
         updateUserData()
     }
+    
+    func updateData(_ newName: String) {
+        updateName(newName)
+    }
+    
 }
