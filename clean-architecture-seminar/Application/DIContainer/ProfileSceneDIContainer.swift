@@ -36,13 +36,13 @@ final class ProfileSceneDIContainer {
     }
     
     // MARK: - View Model
-    func makeProfileViewModel() -> any UserProfileViewModel {
+    private func makeProfileViewModel() -> any UserProfileViewModel {
         DefaultUserProfileViewModel(fetchUserProfileUseCase: makeProfileUseCase())
     }
     
     // MARK: - View Model Wrapper
     
-    func makeUserProfileViewModelWrapper() -> UserProfileViewModelWrapper {
+    private func makeUserProfileViewModelWrapper() -> UserProfileViewModelWrapper {
         UserProfileViewModelWrapper(
             viewModel: makeProfileViewModel()
         )

@@ -18,6 +18,7 @@
 		4A8CA1992C89D0490068F813 /* FetchUserProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8CA1982C89D0490068F813 /* FetchUserProfileProtocol.swift */; };
 		4A99CEA22C88045D005C451B /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A99CEA12C88045D005C451B /* Log.swift */; };
 		4A99CEA42C880A98005C451B /* clean_architecture_seminarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A99CEA32C880A98005C451B /* clean_architecture_seminarApp.swift */; };
+		4AC0F4DB2C9159CF006D528B /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC0F4DA2C9159CF006D528B /* Observable.swift */; };
 		4AF5C7422C88CC010031B9FE /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF5C7412C88CC010031B9FE /* UserProfileView.swift */; };
 		4AF5C7452C88CC640031B9FE /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF5C7442C88CC640031B9FE /* UserProfileViewModel.swift */; };
 		4AF5C74A2C88CD1F0031B9FE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF5C7492C88CD1F0031B9FE /* UserModel.swift */; };
@@ -67,6 +68,7 @@
 		4A8CA1982C89D0490068F813 /* FetchUserProfileProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUserProfileProtocol.swift; sourceTree = "<group>"; };
 		4A99CEA12C88045D005C451B /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		4A99CEA32C880A98005C451B /* clean_architecture_seminarApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = clean_architecture_seminarApp.swift; sourceTree = "<group>"; };
+		4AC0F4DA2C9159CF006D528B /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		4AF5C7412C88CC010031B9FE /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		4AF5C7442C88CC640031B9FE /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
 		4AF5C7492C88CD1F0031B9FE /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 		4AFFC6112C87730400926024 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				4AC0F4DA2C9159CF006D528B /* Observable.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -552,6 +555,7 @@
 				4A2E59552C90A84A004A2798 /* RootView.swift in Sources */,
 				4AF5C7522C88D2920031B9FE /* UserProfileRepository.swift in Sources */,
 				B50160952C855CAD00328AFD /* ContentView.swift in Sources */,
+				4AC0F4DB2C9159CF006D528B /* Observable.swift in Sources */,
 				4A2E594B2C900959004A2798 /* AppFlowCoordinator.swift in Sources */,
 				B50160C42C857C9400328AFD /* DependencyInversion.swift in Sources */,
 				4AF5C74A2C88CD1F0031B9FE /* UserModel.swift in Sources */,

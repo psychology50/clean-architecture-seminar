@@ -6,19 +6,18 @@
 //
 
 import SwiftUI
+import Combine
 
-struct UserProfileView<Model>: View where Model: UserProfileViewModelWrapper{
+struct UserProfileView: View{
     
-    @ObservedObject var viewModelWrapper: Model
+    @ObservedObject var viewModelWrapper: UserProfileViewModelWrapper
     
     var body: some View {
         VStack {
             Circle()
                 .frame(width: 100, height: 100)
-            
-    
+
             Text(viewModelWrapper.userData.name)
-            
             
             Button(action: {
                 Log.debug(viewModelWrapper.userData.name)
@@ -50,11 +49,17 @@ struct UserProfileView<Model>: View where Model: UserProfileViewModelWrapper{
 
 /// `DefaultUserProfileViewModel`의 `userData` 변화를 관찰하여 UI가 자동으로 업데이트되도록 하는 클래스
 final class UserProfileViewModelWrapper: ObservableObject {
-    @Published var userData: UserModel  // 외부에서 관찰될 userData
-    var viewModel: UserProfileViewModel
+    @Published var userData: UserModel
+    var viewModel: any UserProfileViewModel
     
-    init(viewModel: UserProfileViewModel) {
+    init(viewModel: any UserProfileViewModel) {
         self.viewModel = viewModel
-        self.userData = viewModel.userData
+        self.userData = viewModel.userData.value
+        
+        // Observable을 통해 userData 변화를 감지하고 업데이트
+        viewModel.userData.observe(on: self) { [weak self] newUserData in
+            self?.userData = newUserData
+        }
     }
 }
+

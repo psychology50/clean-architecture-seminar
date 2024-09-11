@@ -21,11 +21,12 @@ final class AppComponent{
         return rootComponent(profileFactory: profileFactory).makeView()
     }
 
-    func rootComponent(profileFactory: any ProfileFactory) -> RootComponent {
+    private func rootComponent(profileFactory: any ProfileFactory) -> RootComponent {
         RootComponent(dependency: ProfileFactoryDependency(profileFactory: profileFactory))
     }
 }
 
+//TODO: 다른 폴더로 옮기기
 protocol RootDependency {
     var profileFactory: any ProfileFactory { get }
 }
