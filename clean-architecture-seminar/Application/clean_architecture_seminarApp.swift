@@ -9,12 +9,11 @@ import SwiftUI
 
 @main
 struct clean_architecture_seminarApp: App {
-    let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
-            KeyChainTestView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            AppComponent()
+                    .makeRootView()
         }
     }
 }
