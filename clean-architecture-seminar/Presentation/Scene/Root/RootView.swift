@@ -19,13 +19,7 @@ struct RootView: View {
     var body: some View {
         Group {
             profileFactory.makeProfileView()
-                .eraseToAnyView()
+                .wrapAnyView()
         }
-    }
-}
-
-public extension View {
-    func eraseToAnyView() -> AnyView {
-        AnyView(self)
     }
 }

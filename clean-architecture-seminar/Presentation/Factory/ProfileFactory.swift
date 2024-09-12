@@ -14,8 +14,6 @@ struct ProfileFactoryDependency: RootDependency {
 }
 
 protocol ProfileFactory {
-    //associated type은 프로토콜의 일부로 사용되는 타입을 위한 placeholder 역할을 한다.
-    //associated type은 정의하는 프로토콜이 채택되기 전까지 실제 타입이 명시되지 않는다.
     associatedtype SomeView: View
     func makeProfileView() -> SomeView
 }

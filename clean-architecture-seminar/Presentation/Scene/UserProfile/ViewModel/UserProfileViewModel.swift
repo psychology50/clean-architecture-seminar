@@ -13,43 +13,34 @@ protocol UserProfileViewModelInput {
 }
 
 protocol UserProfileViewModelOutput {
-    var userData: Observable<UserModel> {get}
+    var userData: Observable<UserProfileItemModel> {get}
 }
 
 protocol UserProfileViewModel: UserProfileViewModelInput, UserProfileViewModelOutput { }
 
 class DefaultUserProfileViewModel: UserProfileViewModel {
-    var userData: Observable<UserModel>
+    var userData: Observable<UserProfileItemModel>
     
     private let fetchUserProfileUseCase: FetchUserProfileUseCase
     
     init(fetchUserProfileUseCase: FetchUserProfileUseCase) {
         self.fetchUserProfileUseCase = fetchUserProfileUseCase
-        self.userData = Observable(UserModel(
-            id: 0,
+        self.userData = Observable(UserProfileItemModel(
             username: "",
-            name: "기본",
-            isGeneralSignUp: false,
-            passwordUpdatedAt: "",
-            profileImageUrl: "",
-            phone: "",
-            profileVisibility: "",
-            locked: false,
-            notifySetting: NotifySettingModel(accountBookNotify: false, feedNotify: false, chatNotify: false),
-            createdAt: "",
-            oauthAccount: OAuthAccountModel(kakao: false, google: false, apple: false)
+            name: "기본"
         ))
     }
     
     /// usecase를 호출하여 사용자 데이터를 업데이트하는 메서드
     private func updateUserData() {
-        self.userData.value = fetchUserProfileUseCase.execute()
+        self.userData.value.username = fetchUserProfileUseCase.execute().username
+        self.userData.value.name = fetchUserProfileUseCase.execute().name
+        
         Log.debug(self.userData.value)
     }
     
     /// 이름을 업데이트하는 메서드
     private func updateName(_ newName: String) {
-        self.userData.value = self.userData.value.update(name: newName)
         Log.debug("Updated name to \(newName)")
         Log.debug("Updated \(self.userData.value)")
     }

@@ -18,7 +18,7 @@ final class AppFlowCoordinator {
     }
 
     func profileFlowStart() -> any ProfileFactory {
-        let profileSceneDIContainer = appDIContainer.makeProfileSceneDIContainer()
+        let profileSceneDIContainer = appDIContainer.makeProfileSceneDIContainer()//ProfileSceneDIContainer
         return profileSceneDIContainer.makeProfileFactory()
     }
 }

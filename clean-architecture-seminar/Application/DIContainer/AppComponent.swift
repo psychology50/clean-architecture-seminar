@@ -17,30 +17,11 @@ final class AppComponent{
     }()
     
     func makeRootView() -> some View {
-        let profileFactory = appFlowCoordinator.profileFlowStart()
+        let profileFactory = appFlowCoordinator.profileFlowStart()//DefaultProfileFactory에 wrapper 주입 성공
         return rootComponent(profileFactory: profileFactory).makeView()
     }
 
     private func rootComponent(profileFactory: any ProfileFactory) -> RootComponent {
         RootComponent(dependency: ProfileFactoryDependency(profileFactory: profileFactory))
-    }
-}
-
-//TODO: 다른 폴더로 옮기기
-protocol RootDependency {
-    var profileFactory: any ProfileFactory { get }
-}
-
-final class RootComponent {
-    private let dependency: RootDependency
-    
-    init(dependency: RootDependency) {
-        self.dependency = dependency
-    }
-
-    func makeView() -> some View {
-        RootView(
-            profileFactory: dependency.profileFactory
-        )
     }
 }

@@ -9,8 +9,6 @@ import SwiftUI
 
 @main
 struct clean_architecture_seminarApp: App {
-//    let persistenceController = PersistenceController.shared
-//        .environment(\.managedObjectContext, persistenceController.container.viewContext)
 
     var body: some Scene {
         WindowGroup {

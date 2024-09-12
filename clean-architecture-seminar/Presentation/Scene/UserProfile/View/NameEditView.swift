@@ -10,7 +10,8 @@ import SwiftUI
 struct NameEditView: View{
     
     @ObservedObject var viewModelWrapper: UserProfileViewModelWrapper
-    @State private var newName = ""    
+    @State private var newName = ""
+
     var body: some View {
         VStack {
             Circle()

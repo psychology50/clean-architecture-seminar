@@ -19,8 +19,8 @@ final class ProfileSceneDIContainer {
         self.dependencies = dependencies
     }
     
-    // DefaultProfileFactory를 생성하여 반환
-    func makeProfileFactory() -> DefaultProfileFactory {
+    // MARK: - Factory
+    func makeProfileFactory() -> DefaultProfileFactory {// DefaultProfileFactory를 생성하여 반환
         let viewModelWrapper = makeUserProfileViewModelWrapper()
         return DefaultProfileFactory(userProfileViewModelWrapper: viewModelWrapper)
     }
@@ -41,15 +41,9 @@ final class ProfileSceneDIContainer {
     }
     
     // MARK: - View Model Wrapper
-    
     private func makeUserProfileViewModelWrapper() -> UserProfileViewModelWrapper {
         UserProfileViewModelWrapper(
             viewModel: makeProfileViewModel()
         )
     }
-//    
-//    // MARK: - Flow Coordinator
-//    func createProfileFlow() -> ProfileFlowCoordinator {
-//        ProfileFlowCoordinator(dependencies: self)
-//    }
 }
